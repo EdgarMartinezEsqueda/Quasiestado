@@ -1,16 +1,80 @@
 *,
 *::before,
 *::after {
+  margin: 0;
   box-sizing: border-box;
 }
 /* "crear"  nuestras propias fuentes */
 @font-face {
-  font-family: fuenteRoboto;
-  src: url("/fuentes/Roboto-Regular.ttf");
+  font-family: RobotoRegular;
+  src: url("../fuentes/Roboto-Bold.ttf");
   font-weight: 300;
 }
 @font-face {
-  font-family: fuenteUbuntu;
-  src: url("/fuentes/UbuntuMono-Regular.ttf");
+  font-family: UbuntuRegular;
+  src: url("../fuentes/UbuntuMono-Regular.ttf");
   font-weight: 300;
+}
+
+/* colores */
+:root {
+  --sangria: #592538;
+  --azulMarino: #161040;
+  --azulCielo: #54bfb5;
+  --negro: #0d0d0d;
+  --fondo: #f2f2f2;
+}
+
+.qNavbar {
+  width: 80%;
+  margin: 0 auto;
+  font-family: RobotoRegular;
+}
+header {
+  background-color: var(--sangria);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: sticky;
+}
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.imgQNavbar {
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+nav {
+  float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: white;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
