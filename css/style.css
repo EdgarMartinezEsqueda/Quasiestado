@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* "crear"  nuestras propias fuentes */
+@font-face {
+  font-family: fuenteRoboto;
+  src: url("/fuentes/Roboto-Regular.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: fuenteUbuntu;
+  src: url("/fuentes/UbuntuMono-Regular.ttf");
+  font-weight: 300;
+}
