@@ -1,13 +1,7 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  box-sizing: border-box;
-}
 /* "crear"  nuestras propias fuentes */
 @font-face {
   font-family: RobotoRegular;
-  src: url("../fuentes/Roboto-Bold.ttf");
+  src: url("../fuentes/Roboto-Regular.ttf");
   font-weight: 300;
 }
 @font-face {
@@ -23,18 +17,28 @@
   --azulCielo: #54bfb5;
   --negro: #0d0d0d;
   --fondo: #f2f2f2;
+  --gris: #a6a6a6;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: RobotoRegular;
+}
+
+/* Estilos para el NavBar */
 .qNavbar {
   width: 80%;
   margin: 0 auto;
-  font-family: RobotoRegular;
 }
-header {
+Header {
   background-color: var(--sangria);
   padding-top: 10px;
   padding-bottom: 10px;
   position: sticky;
+  font-family: RobotoRegular;
 }
 header::after {
   content: "";
@@ -69,12 +73,60 @@ nav a {
 nav a::after {
   content: "";
   display: block;
-  height: 5px;
+  height: 3px;
   background-color: white;
   width: 0%;
   transition: all ease-in-out 250ms;
 }
-
+nav a:hover {
+  color: var(--gris);
+  /*text-shadow: white 0.1em 0.1em 0.2em;*/
+}
 nav a:hover::after {
   width: 100%;
+}
+/* Fin de estilos del NavBar */
+
+main {
+  background-color: var(--fondo);
+}
+.qPresentacion {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.qImagenDerecha {
+  float: right;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+}
+.qContenido {
+  padding-top: 20px;
+}
+.qContenido * {
+  padding-bottom: 15px;
+}
+.qBoton {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  letter-spacing: 2px;
+}
+.Izquierda {
+  float: left;
+}
+.Derecha {
+  float: right;
+}
+.qBotonAzul {
+  background: var(--azulMarino);
+  color: white;
+}
+.qBotonVerde {
+  background: var(--azulCielo);
+  color: black;
 }
