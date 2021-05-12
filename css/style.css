@@ -40,11 +40,6 @@ Header {
   position: sticky;
   font-family: RobotoRegular;
 }
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .imgQNavbar {
   float: left;
   width: 40px;
@@ -80,12 +75,20 @@ nav a::after {
 }
 nav a:hover {
   color: var(--gris);
-  /*text-shadow: white 0.1em 0.1em 0.2em;*/
 }
 nav a:hover::after {
   width: 100%;
 }
 /* Fin de estilos del NavBar */
+
+.qPresentacion::after,
+.qFooter::after,
+.qFooter::before,
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 main {
   background-color: var(--fondo);
@@ -97,8 +100,8 @@ main {
 }
 .qImagenDerecha {
   float: right;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   padding: 10px;
 }
 .qContenido {
@@ -110,17 +113,11 @@ main {
 .qBoton {
   text-align: center;
   cursor: pointer;
-  display: block;
   line-height: 24pt;
   padding: 0 20px;
   border: none;
   letter-spacing: 2px;
-}
-.Izquierda {
-  float: left;
-}
-.Derecha {
-  float: right;
+  border-radius: 5px;
 }
 .qBotonAzul {
   background: var(--azulMarino);
@@ -129,4 +126,63 @@ main {
 .qBotonVerde {
   background: var(--azulCielo);
   color: black;
+}
+.qInstalacion {
+  display: flex;
+}
+.qInstalacion .qColumna {
+  width: 100%;
+}
+#comando {
+  background-color: #f6f7f8;
+  color: red;
+}
+
+/* Estilos para el footer */
+.qFooter {
+  background: var(--sangria);
+  color: white;
+  margin-top: 25px;
+}
+.qTítuloLlaves {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.qTítuloLlaves::before {
+  content: "{  ";
+}
+
+.qTítuloLlaves::after {
+  content: "  }";
+}
+
+#avisoPrivacidad {
+  color: white;
+  margin: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.qlinea {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.qFooterInfo {
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  text-align: center;
+}
+
+.qFooterSubTitulo {
+  font-size: 15px;
+}
+
+.qParrafoFooter {
+  font-size: 12px;
 }
