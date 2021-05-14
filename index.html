@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quasiestado</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    />
   </head>
   <body>
     <header>
@@ -17,11 +21,15 @@
             <li><a href="html/docs.html">Docs</a></li>
             <li><a href="html/ejemplos.html">Ejemplos</a></li>
             <li><a href="#">Descargar</a></li>
+            <button class="switch" id="switch">
+              <span class="material-icons" id="cambioModo">mode_night</span>
+            </button>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main">
+      <!-- Presentacion del Quasiestado-->
       <div class="qPagina">
         <div class="qPresentacion">
           <img src="img/logoPresentacion.png" class="qImagenDerecha" />
@@ -56,6 +64,64 @@
             >
           </div>
         </div>
+        <!-- Fin de la presentación del Quasiestado -->
+        <!-- Borrar en caso de no jalar XD -->
+        <div class="qContenidoIndexado">
+          <aside class="qSideIndice">
+            <div class="qContenedorSide">
+              <h1>Índice</h1>
+              <ul>
+                <li>
+                  <a href="#articulo1" class="qEnlace">¿Qué es Quasiestado?</a>
+                </li>
+                <li>
+                  <a href="#articulo2" class="qEnlace"
+                    >¿Por qué usar Quasiestado?</a
+                  >
+                </li>
+                <li>
+                  <a href="#articulo3" class="qEnlace"
+                    >¿Cómo usar Quasiestado?</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <div class="qContenido">
+            <article id="articulo1">
+              <h2>¿Qué es Quasiestado?</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+                in id ex facilis ad dolorem, eum eos voluptate culpa odio
+                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
+                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
+                quis iste voluptas ullam!
+              </p>
+            </article>
+            <div class="qTarjeta"></div>
+            <article id="articulo2">
+              <h2>¿Por qué usar Quasiestado?</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+                in id ex facilis ad dolorem, eum eos voluptate culpa odio
+                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
+                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
+                quis iste voluptas ullam!
+              </p>
+            </article>
+            <article id="articulo3">
+              <h2>¿Cómo usar Quasiestado?</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+                in id ex facilis ad dolorem, eum eos voluptate culpa odio
+                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
+                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
+                quis iste voluptas ullam!
+              </p>
+            </article>
+          </div>
+        </div>
+        <!-- Fin del indicador de borrado -->
       </div>
     </main>
     <footer class="qFooter">
@@ -95,5 +161,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
