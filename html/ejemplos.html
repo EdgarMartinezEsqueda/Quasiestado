@@ -4,23 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Quasiestado</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    />
   </head>
   <body>
     <header>
-      <div class="qNavbar">
-        <img src="../img/logo.png" class="imgQNavbar" />
+      <div class="qNavbar" id="qNavbar">
+        <a href="../index.html"
+          ><img src="../img/logo.png" class="imgQNavbar"
+        /></a>
         <nav>
           <ul>
             <li><a href="../index.html"> Inicio </a></li>
             <li><a href="docs.html">Docs</a></li>
             <li><a href="ejemplos.html">Ejemplos</a></li>
-            <li><a href="#">Descargar</a></li>
+            <li><a href="descargar.html">Descargar</a></li>
+            <button class="switch" id="switch">
+              <span class="material-icons" id="cambioModo">mode_night</span>
+            </button>
           </ul>
         </nav>
+        <div class="qNavbarResponsivo" id="qNavbarResponsivo">
+          <span class="material-icons">more_horiz</span>
+        </div>
       </div>
     </header>
-    <h1>Ejemplos</h1>
+
+    <main>
+      <div>
+        <h1>Ejemplos</h1>
+        <p>
+          El equipo de MORENA Soft & Co. trae para ti estos ejemplos de paginas
+          web, para que las implementes tú mismo
+        </p>
+        <div class="qCatalogoEjemplos">
+          <div class="qEjemplosHTML">
+            <a href="Login.html"><img src="../img/capturaLogin.JPG" /></a>
+            <p>Login</p>
+          </div>
+          <div class="qEjemplosHTML">
+            <a href="404.html"><img src="../img/captura404.JPG" /></a>
+            <p>Error 404</p>
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+    </main>
+
+    <footer class="qFooter">
+      <h1 class="qTítuloLlaves">Quasiestado</h1>
+      <p id="avisoPrivacidad">
+        Copyrigth © 2021 Morena Soft & Co. Todos los derechos reservados.
+      </p>
+      <hr class="qLinea" />
+      <div class="qFooterInfo">
+        <div>
+          <h3 class="qFooterSubTitulo">Patrocinadores</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">¿Quiénes somos?</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">Noticias</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">Contacto</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

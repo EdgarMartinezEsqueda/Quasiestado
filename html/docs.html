@@ -4,23 +4,520 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Quasiestado</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    />
   </head>
   <body>
     <header>
-      <div class="qNavbar">
-        <img src="../img/logo.png" class="imgQNavbar" />
+      <div class="qNavbar" id="qNavbar">
+        <a href="../index.html"
+          ><img src="../img/logo.png" class="imgQNavbar"
+        /></a>
         <nav>
           <ul>
             <li><a href="../index.html"> Inicio </a></li>
             <li><a href="docs.html">Docs</a></li>
             <li><a href="ejemplos.html">Ejemplos</a></li>
-            <li><a href="#">Descargar</a></li>
+            <li><a href="descargar.html">Descargar</a></li>
+            <button class="switch" id="switch">
+              <span class="material-icons" id="cambioModo">mode_night</span>
+            </button>
           </ul>
         </nav>
+        <div class="qNavbarResponsivo" id="qNavbarResponsivo">
+          <span class="material-icons">more_horiz</span>
+        </div>
       </div>
     </header>
-    <h1>Documentacion</h1>
+    <main id="main">
+      <div class="qAbrirSidebar">
+        <span class="material-icons">
+          menu
+        </span>
+      </div>
+      <!-- Todo esto es el Sidebar junto a sus submenus -->
+      <div class="qSidebar">
+        <div class="qCerrarSidebar">
+          <span class="material-icons">
+            close
+          </span>
+        </div>
+        <aside class="qSidebarMenu">
+          <div class="qItem"><a href="#encabezados">Encabezados</a></div>
+          <div class="qItem">
+            <a class="qAbrirSubMenu"
+              >Formularios<span class="material-icons">expand_more</span></a
+            >
+            <div class="qSubMenu">
+              <div class="qSubItem"><a href="#textField">Text fields</a></div>
+              <div class="qSubItem">
+                <a href="#radioButtons">Radio Buttons</a>
+              </div>
+              <div class="qSubItem"><a href="#checkbox">Checkbox</a></div>
+              <div class="qSubItem"><a href="#select">Select</a></div>
+              <div class="qSubItem"><a href="#textArea">Text Area</a></div>
+            </div>
+          </div>
+          <div class="qItem"><a href="#animaciones">Animaciones</a></div>
+          <div class="qItem"><a href="#tarjetas">Tarjetas</a></div>
+          <div class="qItem"><a href="#iconos">Íconos</a></div>
+        </aside>
+      </div>
+      <!-- Fin del sidebar -->
+
+      <!-- Empieza el contenido de la pagina -->
+      <div id="encabezados">
+        <h1>Encabezados</h1>
+        <p>
+          Los encabezados son de los elementos indispensables en una pagina web,
+          aquí el equipo de ingenieros de MORENA Soft & Co. trae para tí estas
+          dos versiones con las fuentes más utilizadas del momento: Roboto y
+          Ubuntu
+        </p>
+        <div class="qHeaders">
+          <div class="qHeaderRoboto qColumna">
+            <label>class = "qHeaderRoboto"</label>
+            <h1>Encabezado h1</h1>
+            <h2>Encabezado h2</h2>
+            <h3>Encabezado h3</h3>
+            <h4>Encabezado h4</h4>
+            <h5>Encabezado h5</h5>
+            <h6>Encabezado h6</h6>
+          </div>
+          <div class="qHeaderUbuntu qColumna">
+            <label>class = "qHeaderUbuntu"</label>
+            <h1>Encabezado h1</h1>
+            <h2>Encabezado h2</h2>
+            <h3>Encabezado h3</h3>
+            <h4>Encabezado h4</h4>
+            <h5>Encabezado h5</h5>
+            <h6>Encabezado h6</h6>
+          </div>
+        </div>
+      </div>
+
+      <div id="formularios">
+        <h1>Formulario</h1>
+        <p>
+          Los formularios web son uno de los principales puntos de interacción
+          entre un usuario y un sitio web o aplicación, el equipo de MORENA Soft
+          & Co. trae para tí los siguientes ejemplos
+        </p>
+        <h3 id="textField">Campos de Texto</h3>
+        <div class="ejemploForms">
+          <label>Texto plano</label><br />
+          <input
+            type="text"
+            class="qTexto"
+            placeholder="Campo de texto"
+          /><br />
+        </div>
+        <div class="ejemploForms">
+          <label>Campo para Contraseñas</label><br />
+          <input type="password" class="qContrasena" /><br />
+        </div>
+
+        <h3 id="radioButtons">Radio Buttons</h3>
+        <div class="ejemploForms">
+          <input type="radio" name="ejemplo" class="qRadio" /><label>Sí</label
+          ><br />
+          <input type="radio" name="ejemplo" class="qRadio" /><label>No</label
+          ><br />
+          <input type="radio" name="ejemplo" class="qRadio" /><label
+            >Tal vez</label
+          ><br />
+        </div>
+
+        <h3 id="checkbox">Checkbox</h3>
+        <div class="ejemploForms">
+          <input type="checkbox" class="qCheckbox" /><label> Opción #1</label
+          ><br />
+          <input type="checkbox" class="qCheckbox" /><label> Opción #2</label
+          ><br />
+        </div>
+
+        <h3 id="select">Select</h3>
+        <div class="ejemploForms">
+          <select class="qSelect">
+            <option>Opción #1</option>
+            <option>Opción #2</option>
+            <option>Opción #3</option>
+          </select>
+        </div>
+
+        <h3 id="textArea">Text Area</h3>
+        <div class="ejemploForms">
+          <textarea
+            rows="2"
+            cols="50"
+            placeholder="TextArea"
+            class="qTextArea"
+          ></textarea>
+        </div>
+
+        <h3>Formulario con los ejemplos previos</h3>
+        <form class="qForm">
+          <label>Texto<em>*</em></label
+          ><br />
+          <input
+            name="text"
+            type="text"
+            class="qTexto qCampoObligatorio"
+            placeholder="Campo de texto"
+          /><br /><br />
+          <label>Radio Buttons</label><br />
+          <input
+            type="radio"
+            name="qRadio"
+            class="qRadio"
+            value="hombre"
+          /><label>Sí</label><br />
+          <input
+            type="radio"
+            name="qRadio"
+            class="qRadio"
+            value="mujer"
+          /><label>No</label><br /><br />
+
+          <label>Contraseña <em>*</em></label
+          ><br />
+          <input
+            type="password"
+            class="qContrasena qCampoObligatorio"
+            name="contra1"
+          /><br /><br />
+
+          <label>Checkbox</label><br />
+          <input type="checkbox" class="qCheckbox" /><label> PC/Laptop</label
+          ><br />
+          <input type="checkbox" class="qCheckbox" /><label>
+            Movíl/Tableta electrónica</label
+          ><br /><br />
+
+          <label>Lista de opciones<em>*</em></label
+          ><br />
+          <select class="qSelect">
+            <option>Arremángala, arrempújala, sí</option>
+            <option>Arremángala, arrempújala, no</option> </select
+          ><br /><br />
+
+          <label>Text Area</label><br />
+          <textarea
+            rows="2"
+            cols="50"
+            placeholder="TextArea"
+            class="qTextArea"
+          ></textarea
+          ><br /><br />
+
+          <button type="button" class="qBoton qBotonAzul qLimpiarForm">
+            Limpiar
+          </button>
+          <input
+            class="qBoton qBotonVerde"
+            id="qEnviarForm"
+            type="submit"
+            value="Aceptar"
+          /><br />
+        </form>
+        <label>¡Agrégalo a tu página!</label>
+        <pre class="qCodigoHTML">
+              <button class="qCopiarContenido">Copiar</button>
+            <code>
+              &lt;form class="qForm"&gt;
+              &emsp;&lt;label&gt;Texto&lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+              &emsp;&lt;input type="text" class="qTexto" required /&gt;
+
+              &emsp;&lt;label&gt;Radio Buttons &lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+              &emsp;&lt;input type="radio" name="qRadio" class="qRadio" required /&gt;&lt;
+              &emsp;&lt;input type="radio" name="qRadio" class="qRadio" required /&gt;&lt;
+
+              &emsp;&lt;label&gt;Contraseña &lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+              &emsp;&lt;input type="password" class="qContrasena" required /&gt;
+
+              &emsp;&lt;label&gt;Checkbox&lt;/label&gt;
+              &emsp;&lt;input type="checkbox" class="qCheckbox" /&gt;&lt;label&gt; Checa&lt;/label&gt;
+              &emsp;&lt;input type="checkbox" class="qCheckbox" /&gt;&lt;label&gt; Checa&lt;/label&gt;
+
+              &emsp;&lt;label&gt;Lista de opciones&lt;em&gt;*&lt;/em&gt;&lt;/label&gt;
+              &emsp;&lt;select class="qSelect"&gt;
+              &emsp;&emsp;&lt;option&gt;Arremángala, arrempújala, sí&lt;/option&gt;
+              &emsp;&emsp;&lt;option&gt;Arremángala, arrempújala, no&lt;/option&gt; 
+              &emsp;&lt;/select&gt;
+
+              &emsp;&lt;label&gt;Text Area&lt;/label&gt;
+              &emsp;&lt;textarea class="qTextArea" &gt;&lt;/textarea&gt;
+
+              &emsp;&lt;button class="qBoton qBotonAzul"&gt;Limpiar&lt;/button&gt;
+              &emsp;&lt;input class="qBoton qBotonVerde" type="submit" value="Aceptar" /&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+      </div>
+      <!-- Apartado de animaciones -->
+      <div class="qAnimaciones" id="animaciones">
+        <h1>Animaciones</h1>
+        <p>
+          Las animaciones son importantes para cualquier página web porque hace
+          que la experiencia de los usuarios se vea mejorada, aqui te
+          presentamos algunos ejemplos que puedes implementar en tu propia
+          página web
+        </p>
+        <br />
+        <h3>Cambio entre 3 palabras</h3>
+        <p>
+          Si casualmente tienes 3 palabras las cuales quieres que vayan rotando
+          de manera infinita, usa la animación que el equipo de MORENA Soft &
+          Co. trae para tí
+        </p>
+        <div class="ejemploForms qTextoAnimado">
+          Titulo genético
+          <div class="qGiro">
+            <div><div>Palabra 1</div></div>
+            <div><div>Palabra 2</div></div>
+            <div><div>Palabra 3</div></div>
+          </div>
+          Subtitulo generico
+        </div>
+        <label>¡Agrégalo a tu página!</label>
+        <pre class="qCodigoHTML">
+          <button class="qCopiarContenido">Copiar</button>
+          <code>
+            &lt;div class="qTextoAnimado"&gt;
+            &emsp;Titulo genético
+            &emsp;&lt;div class="qGiro"&gt;
+            &emsp;&emsp;&lt;div&gt;&lt;div&gt;Palabra 1&lt;/div&gt;&lt;/div&gt;
+            &emsp;&emsp;&lt;div&gt;&lt;div&gt;Palabra 2&lt;/div&gt;&lt;/div&gt;
+            &emsp;&emsp;&lt;div&gt;&lt;div&gt;Palabra 3&lt;/div&gt;&lt;/div&gt;
+            &emsp;&lt;/div&gt;
+            &emsp;Subtitulo generico
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <!-- Apartados de para la barra de proceso -->
+        <h3>Barra de procesos</h3>
+        <p>
+          Si deseas mostrar algún avance en los procesos que se estan
+          realizando, el equipo de MORENA Soft & Co. te trae las siguientes
+          ideas
+        </p>
+        <div class="ejemploForms qContenedorCargando">
+          <div class="qCargando">
+            <div class="qCargandoTexto">Cargando</div>
+            <div class="qPorcentaje">
+              <div class="qProgreso" id="infinito"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ejemploForms qContenedorCargando">
+          <div class="qCargando">
+            <div class="qCargandoTexto">Proceso</div>
+            <div class="qPorcentaje">
+              <div class="qProgreso" id="finito"></div>
+            </div>
+          </div>
+        </div>
+        <label>¡Agrégalo a tu página!</label><br />
+        <label
+          >Si quieres una barra como el primer ejemplo, usa el id "infinito",
+          caso contrario usa el id "finito"
+        </label>
+        <pre class="qCodigoHTML">
+          <button class="qCopiarContenido">Copiar</button>
+          <code>
+            &lt;div class="qContenedorCargando"&gt;
+            &emsp;&lt;div class="qCargando"&gt;
+            &emsp;&emsp;&lt;div class="qCargandoTexto"&gt;Cargando&lt;/div&gt;
+            &emsp;&emsp;&lt;div class="qPorcentaje"&gt;
+            &emsp;&emsp;&emsp;&lt;div class="qProgreso" id="AQUIPONELID"&gt;&lt;/div&gt;
+            &emsp;&emsp;&lt;/div&gt;
+            &emsp;&lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+
+        <h3>Cargando...</h3>
+        <p>
+          Si lo tuyo no son las barras, entonces checa la siguiente animación
+        </p>
+        <div class="qContenedorCargandoEspiral">
+          <div class="qCargandoEspiral"><span></span></div>
+        </div>
+        <label>¡Agrégalo a tu página!</label><br />
+        <pre class="qCodigoHTML">
+          <button class="qCopiarContenido">Copiar</button>
+          <code>
+            &lt;div class="qContenedorCargandoEspiral"&gt;
+            &emsp;&lt;div class="qCargandoEspiral"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+
+        <h3>Efecto "Glitch"</h3>
+        <p>
+          ¿Quieres recordar cuando tu televisor/monitor no transmitía bien la
+          imagen por esos cables todos viejos y pelados que usabas? Usa este
+          efecto para darle un valor agregado a tu página
+        </p>
+        <div class="qContenedorGlitch">
+          <h2 class="qGlitch" data-text="Texto">Texto</h2>
+        </div>
+        <label
+          >¡Agrégalo a tu página! (Recuerda que el texto dentro del h2, tiene
+          que ser el mismo dentro del "data-text")</label
+        ><br />
+        <pre class="qCodigoHTML">
+          <button class="qCopiarContenido">Copiar</button>
+          <code>
+            &lt;div class="qContenedorGlitch"&gt;
+            &emsp;&lt;h2 class="qGlitch" data-text="Texto"&gt;Texto&lt;/h2&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
+      <div id="tarjetas">
+        <h1>Tarjetas</h1>
+        <p>
+          Las tarjetas son una gran manera de presentar información al usuario,
+          te tenemos la siguiente propuesta
+        </p>
+        <div class="qTarjeta">
+          <div class="qImgTarjeta">
+            <img src="../img/tarjeta1.jpg" alt="" class="qImg" />
+          </div>
+          <div class="qInfoTarjeta">
+            <h1>Lorem XD</h1>
+            <hr class="qLineaTarjeta" />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatem numquam nihil minus velit laborum laboriosam magni
+              error, atque sint eius veniam quia nam corrupti eum mollitia at
+              aut adipisci! Excepturi.
+            </p>
+            <br />
+            <a href="" class="qEnlaceBoton">Aprender más</a>
+          </div>
+        </div>
+        <label
+          >¡Agrégalo a tu página! (Recuerda poner en "src" la ruta de tu
+          imagen)</label
+        ><br />
+        <pre class="qCodigoHTML">
+          <button class="qCopiarContenido">Copiar</button>
+          <code>
+            &lt;div class="qTarjeta"&gt;
+            &emsp;&lt;div class="qImgTarjeta"&gt;
+            &emsp;&emsp;&lt;img src="" alt="" class="qImg" /&gt;
+            &emsp;&lt;/div&gt;
+            &emsp;&lt;div class="qInfoTarjeta"&gt;
+            &emsp;&emsp;&lt;h1&gt;Lorem XD&lt;/h1&gt;
+            &emsp;&emsp;&lt;hr class="qLineaTarjeta" /&gt;
+            &emsp;&emsp;&lt;p&gt;
+            &emsp;&emsp;&emsp;TU CONTENIDO
+            &emsp;&emsp;&lt;/p&gt;
+            &emsp;&emsp;&lt;br /&gt;
+            &emsp;&emsp;&lt;a href="" class="qEnlaceBoton"&gt;Aprender más&lt;/a&gt;
+            &emsp;&lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+
+      <div id="iconos">
+        <h1>Íconos</h1>
+        <p>
+          Íconos para toda ocasión, el equipo de MORENA Soft & Co. te trae los
+          siguientes ejemplos
+        </p>
+        <div class="qContenedorIconos">
+          <span class="material-icons qIconos">
+            search
+          </span>
+          <span class="material-icons qIconos">
+            home
+          </span>
+          <span class="material-icons qIconos">
+            settings
+          </span>
+          <span class="material-icons qIconos">
+            done
+          </span>
+          <span class="material-icons qIconos">
+            account_circle
+          </span>
+          <span class="material-icons qIconos">
+            info
+          </span>
+          <span class="material-icons qIconos">
+            check_circle
+          </span>
+          <span class="material-icons qIconos">
+            delete
+          </span>
+        </div>
+        <p>
+          ¿Quieres ver más íconos de nuestra selección? Click
+          <a href="https://fonts.google.com/icons?selected=Material+Icons"
+            >aquí</a
+          >
+        </p>
+      </div>
+
+      <!-- Boton para subir al tope de la página -->
+      <button
+        id="qBtnSubir"
+        class="qBtnSubir"
+        title="Inicio de la página"
+        onclick="subir()"
+      >
+        <span class="material-icons">north</span>
+      </button>
+    </main>
+
+    <footer class="qFooter">
+      <h1 class="qTítuloLlaves">Quasiestado</h1>
+      <p id="avisoPrivacidad">
+        Copyrigth © 2021 Morena Soft & Co. Todos los derechos reservados.
+      </p>
+      <hr class="qLinea" />
+      <div class="qFooterInfo">
+        <div>
+          <h3 class="qFooterSubTitulo">Patrocinadores</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">¿Quiénes somos?</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">Noticias</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+        <div>
+          <h3 class="qFooterSubTitulo">Contacto</h3>
+          <p class="qParrafoFooter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit, quae.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

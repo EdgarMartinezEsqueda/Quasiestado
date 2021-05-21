@@ -13,35 +13,44 @@
   </head>
   <body>
     <header>
-      <div class="qNavbar">
-        <img src="img/logo.png" class="imgQNavbar" />
+      <div class="qNavbar" id="qNavbar">
+        <a href="index.html"><img src="img/logo.png" class="imgQNavbar" /></a>
         <nav>
           <ul>
             <li><a href="index.html"> Inicio </a></li>
             <li><a href="html/docs.html">Docs</a></li>
             <li><a href="html/ejemplos.html">Ejemplos</a></li>
-            <li><a href="#">Descargar</a></li>
+            <li><a href="html/descargar.html">Descargar</a></li>
             <button class="switch" id="switch">
               <span class="material-icons" id="cambioModo">mode_night</span>
             </button>
           </ul>
         </nav>
+        <div class="qNavbarResponsivo" id="qNavbarResponsivo">
+          <span class="material-icons">more_horiz</span>
+        </div>
       </div>
     </header>
     <main id="main">
       <!-- Presentacion del Quasiestado-->
       <div class="qPagina">
         <div class="qPresentacion">
-          <img src="img/logoPresentacion.png" class="qImagenDerecha" />
           <div class="qContenido">
             <h1>Crea páginas de manera rápida con Quasiestado</h1>
             <p>
-              Diseña y customiza tu página de manera rápida con las poderosas
-              herramientas que el equipo de MORENA Soft & Co. trae para tí
+              Diseña y customiza tu propia página de manera rápida con las
+              poderosas herramientas que el equipo de MORENA Soft & Co. trae
+              para tí en este asombroso framwork.
             </p>
             <p>
               Quasiestado está diseñado por y para intentos de ingenieros que
-              buscan simplificarse la creación de poderosas páginas web
+              buscan simplificarse la creación de poderosas páginas web.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              cumque deserunt voluptatum ipsum suscipit ullam distinctio itaque
+              pariatur nam, corrupti harum necessitatibus, ut nemo accusantium
+              similique cum, incidunt hic odio.
             </p>
             <button
               class="qBoton qBotonVerde"
@@ -51,6 +60,8 @@
             </button>
             <button class="qBoton qBotonAzul" onclick="">Descargar</button>
           </div>
+
+          <img src="img/logoPresentacion.png" class="qImagenDerecha" />
         </div>
         <div class="qPresentacion qContenido">
           <h2>Instalación</h2>
@@ -65,64 +76,171 @@
           </div>
         </div>
         <!-- Fin de la presentación del Quasiestado -->
-        <!-- Borrar en caso de no jalar XD -->
+        <!-- Cuerpo de la página principal -->
         <div class="qContenidoIndexado">
-          <aside class="qSideIndice">
+          <div class="qAbrirSidebarIndice">
+            <span class="material-icons">
+              arrow_forward_ios
+            </span>
+          </div>
+          <div class="qSidebarIndiceRes">
+            <div class="qCerrarSidebar">
+              <span class="material-icons">
+                close
+              </span>
+            </div>
+            <aside class="qSidebarMenu">
+              <div class="qItem">
+                <a href="#seccion1" class="qEnlace">¿Qué es Quasiestado?</a>
+              </div>
+              <div class="qItem">
+                <a href="#seccion2" class="qAbrirSubMenu">
+                  ¿Por qué usar Quasiestado?
+                  <span class="material-icons"> expand_more </span>
+                </a>
+                <div class="qSubMenu">
+                  <div class="qSubItem">
+                    <a href="#seccion2.1">Testimonios</a>
+                  </div>
+                </div>
+              </div>
+              <div class="qItem">
+                <a href="#seccion3" class="qAbrirSubMenu">
+                  ¿Cómo usar Quasiestado?
+                </a>
+              </div>
+            </aside>
+          </div>
+          <aside class="qSidebarIndice">
             <div class="qContenedorSide">
               <h1>Índice</h1>
-              <ul>
-                <li>
-                  <a href="#articulo1" class="qEnlace">¿Qué es Quasiestado?</a>
-                </li>
-                <li>
-                  <a href="#articulo2" class="qEnlace"
-                    >¿Por qué usar Quasiestado?</a
-                  >
-                </li>
-                <li>
-                  <a href="#articulo3" class="qEnlace"
-                    >¿Cómo usar Quasiestado?</a
-                  >
-                </li>
-              </ul>
+              <div class="qSidebarMenu">
+                <div class="qItem">
+                  <a href="#seccion1" class="qEnlace">¿Qué es Quasiestado?</a>
+                </div>
+                <div class="qItem">
+                  <a href="#seccion2" class="qAbrirSubMenu">
+                    ¿Por qué usar Quasiestado?
+                    <span class="material-icons"> expand_more </span>
+                  </a>
+                  <div class="qSubMenu">
+                    <div class="qSubItem">
+                      <a href="#seccion2.1">Testimonios</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="qItem">
+                  <a href="#seccion3">
+                    ¿Cómo usar Quasiestado?
+                  </a>
+                </div>
+              </div>
             </div>
           </aside>
           <div class="qContenido">
-            <article id="articulo1">
-              <h2>¿Qué es Quasiestado?</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                in id ex facilis ad dolorem, eum eos voluptate culpa odio
-                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
-                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
-                quis iste voluptas ullam!
-              </p>
+            <article>
+              <section id="seccion1">
+                <h2>¿Qué es Quasiestado?</h2>
+                <p>
+                  Quasiestado es un desarrollo de Morena Soft & Co., se trata de
+                  un framework (o marco de trabajo en español), que facilita la
+                  tarea de desarrollo de sitios web, ya que proporciona
+                  distintos estilos y scripts como base, listos para su
+                  implementación.
+                </p>
+                <div class="qTarjeta">
+                  <div class="qImgTarjeta">
+                    <img src="img/tarjeta1.jpg" alt="" class="qImg" />
+                  </div>
+                  <div class="qInfoTarjeta">
+                    <h1>Desarrolla sitios web de forma rápida</h1>
+                    <hr class="qLineaTarjeta" />
+                    <p>
+                      ¿Estás listo para utilizar nuestra herramienta? Echa un
+                      vistazo a todas las utilidades, estilos y animaciones que
+                      Quasiestado puede aportar a tus sitios web.
+                    </p>
+                    <a href="html/docs.html" class="qEnlaceBoton"
+                      >Aprender más</a
+                    >
+                  </div>
+                </div>
+              </section>
+              <section id="seccion2">
+                <h2>¿Por qué usar Quasiestado?</h2>
+                <p>
+                  Uno de los principales motivos es que facilita la tarea que se
+                  supone desarrollar un sitio web, gracias a que proporciona una
+                  amplia gama de herramientas como estilos, animaciones y
+                  funcionalidades, además de contar con una experiencia de
+                  implementación intuitiva, pero, no nos creas a nosotros, mejor
+                  echa un vistazo a los testimonios de experiencia de uso que
+                  comparten nuestros usuarios.
+                </p>
+                <section class="qSubSeccion" id="seccion2.1">
+                  <h2>Testimonios</h2>
+                  <div class="qContenedorComentario">
+                    <div id="listaComentarios">
+                      <div class="qComentario">
+                        <div class="qTituloComCard">
+                          <h2 class="qUsuarioComentario">
+                            José Carlos Casanueva
+                          </h2>
+                          <p class="qDescUsuario">ingeniero en software</p>
+                        </div>
+                        <p class="qCita">Está de Pelos!!!</p>
+                      </div>
+                      <div class="qComentario">
+                        <div class="qTituloComCard">
+                          <h2 class="qUsuarioComentario">Anónimo</h2>
+                          <p class="qDescUsuario">Desarrollador web</p>
+                        </div>
+                        <p class="qCita">Excelente herramienta</p>
+                      </div>
+                    </div>
+                    <div class="qContenedorBtn">
+                      <button
+                        class="qBtnComentar qActivaModal"
+                        title="Cuentanos tu experiencia"
+                      >
+                        <span class="material-icons"> chat</span>
+                      </button>
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <section id="seccion3">
+                <h2>¿Cómo usar Quasiestado?</h2>
+                <p>
+                  El primer paso para utilizar Quasiestado es descargarlo,
+                  posteriormente ubicar los archivos del framwork dentro del
+                  directorio de tu proyecto y enlazarlos con los HTML, si aún no
+                  tienes quasiestado descargalo
+                  <a href="html/descargar.html">aquí</a>.
+                </p>
+                <p>
+                  Si ya cuentas con Quasiestado apóyate de la
+                  <a href="html/docs.html">documentación</a> que ofrece este
+                  sitio para la implementación de sus utilidades en tus
+                  desarrollos.
+                </p>
+              </section>
             </article>
-            <div class="qTarjeta"></div>
-            <article id="articulo2">
-              <h2>¿Por qué usar Quasiestado?</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                in id ex facilis ad dolorem, eum eos voluptate culpa odio
-                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
-                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
-                quis iste voluptas ullam!
-              </p>
-            </article>
-            <article id="articulo3">
-              <h2>¿Cómo usar Quasiestado?</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                in id ex facilis ad dolorem, eum eos voluptate culpa odio
-                veritatis nobis, aliquid assumenda consequuntur nihil corrupti
-                ut ea delectus repellat obcaecati doloribus quos! Nostrum autem
-                quis iste voluptas ullam!
-              </p>
-            </article>
+            <p class="qIrDescripcion">
+              ¿Deseas conocer más acerca de MORENA Soft & Co.? Haz click
+              <a href="html/presentacion.html">aquí</a>
+            </p>
           </div>
         </div>
-        <!-- Fin del indicador de borrado -->
       </div>
+      <button
+        id="qBtnSubir"
+        class="qBtnSubir"
+        title="Inicio de la página"
+        onclick="subir()"
+      >
+        <span class="material-icons">north</span>
+      </button>
     </main>
     <footer class="qFooter">
       <h1 class="qTítuloLlaves">Quasiestado</h1>
@@ -161,6 +279,60 @@
         </div>
       </div>
     </footer>
+    <!-- Modal agregar comentario -->
+    <div class="qFondoModal qOculto">
+      <div class="qModal">
+        <div class="qTituloModal">
+          <h1>Cuéntanos tu experiencia</h1>
+        </div>
+        <div class="qContenidoModal">
+          <form action="" id="qModalForm">
+            <div class="qTablaForm">
+              <div class="qTextoCeldaForm">
+                <label for="">Nombre</label>
+                <input
+                  type="text"
+                  class="qTexto"
+                  id="usuarioNom"
+                  placeholder="Nombre"
+                />
+              </div>
+              <div class="qTextoCeldaForm">
+                <label for="">Ocupación</label>
+                <input
+                  type="text"
+                  class="qTexto"
+                  id="usuarioOcp"
+                  placeholder="Usuario de Quasiestado"
+                />
+              </div>
+              <div class="qTextAreaCeldaForm">
+                <label for="">Experiencia con Quasiestado<em>*</em></label>
+                <textarea
+                  name="Experiencia"
+                  id="usuarioExp"
+                  cols="30"
+                  rows="10"
+                  class="qTextArea qCampoObligatorio"
+                  placeholder="Experinecia como usuario de Quasiestado."
+                ></textarea>
+              </div>
+              <button type="button" class="qBotonAzul qBloqueaModal">
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="qBotonVerde qBtnEnviar"
+                id="qSubirModalForm"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
